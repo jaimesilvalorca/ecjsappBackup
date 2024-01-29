@@ -9,6 +9,8 @@ const ProfileScreen = ({ navigation }) => {
 
     const image = useSelector(state => state.authReducer.profilePicture)
 
+    const location = useSelector(state => state.authReducer.location)
+
     return (
         <>
             <View style={styles.container}>
@@ -36,7 +38,6 @@ const ProfileScreen = ({ navigation }) => {
                                     resizeMode='contain'
                                 />
 
-
                         }
 
 
@@ -53,6 +54,13 @@ const ProfileScreen = ({ navigation }) => {
                 </View>
 
             </View>
+            {
+                location.address &&
+                <View style={styles.addressContainer}>
+                    <Text style={styles.addressTitle}>Ultima ubicacion guardada: </Text>
+                    <Text style={styles.addressDescription}>{location.address}</Text>
+                </View>
+            }
             <LocationSelector />
         </>
     )

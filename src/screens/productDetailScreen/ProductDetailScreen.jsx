@@ -23,9 +23,6 @@ const ProductDetailScreen = ({ route}) => {
   }, [height])
 
   useEffect(() => {
-    // const productFound = products_data.find(product => product.id === productId)
-    // setProductSelected(productFound)
-
     setIsLoading(!isLoading)
   }, [productId])
 
@@ -33,7 +30,6 @@ const ProductDetailScreen = ({ route}) => {
 
   const onAddToCart = () =>{
     dispatch(addItem({...productSelected,quantity:1}))
-
   }
 
 
@@ -47,11 +43,6 @@ const ProductDetailScreen = ({ route}) => {
           :
           <>
             <ScrollView >
-              {/* <Image
-                source={{ uri: productSelected.images[0] }}
-                resizeMode='cover'
-                style={isPortrait ? styles.imageProduct : styles.imageProductLandscape}
-              /> */}
               <Carousel images={productSelected.images} />
               <View style={styles.detailContainer}>
                 <Text style={styles.title}>{productSelected.title}</Text>
@@ -60,6 +51,7 @@ const ProductDetailScreen = ({ route}) => {
                 <TouchableOpacity style={isPortrait ? styles.buyButton : styles.buyAlt} onPress={onAddToCart}>
                   <Text style={styles.buyText}>Agregar al carrito</Text>
                 </TouchableOpacity>
+                
               </View>
             </ScrollView>
           </>

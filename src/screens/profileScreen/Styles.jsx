@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { colors } from "../../global/colors";
 
 
 const StylesProfileScreen = StyleSheet.create({
@@ -26,6 +27,23 @@ const StylesProfileScreen = StyleSheet.create({
     userData: {
         fontFamily: 'ComicNeue-Light',
         fontSize: 18
+    },
+    addressContainer:{
+        alignItems:'center',
+        gap:5,
+        padding:10,
+        margin:10,
+        borderRadius:10,
+        backgroundColor:colors.third
+    },
+    addressTitle:{
+        fontFamily:'ComicNeue-Bold',
+        fontSize:14,
+        color:'white'
+    },
+    addressDescription:{
+        fontFamily:'ComicNeue-Light',
+        color:'white'
     }
 })
 

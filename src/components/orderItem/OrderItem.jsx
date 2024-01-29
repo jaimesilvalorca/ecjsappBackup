@@ -5,18 +5,26 @@ import { Feather } from '@expo/vector-icons';
 
 
 
-const OrderItem = ({order,total}) => {
+const OrderItem = ({order,setOrderId, setModalVisible}) => {
+  console.log("orderitem",order.updateAt)
+  console.log(order.orderId)
+  let date = new Date(order.updateAt)
+  date = date.toLocaleString()
+  console.log(date)
   return (
     <Card style={styles.cartItemContainer}>
       <View>
         <Text style={styles.createdAt}>
-          Creada el {new Date(order.createdAt).toLocaleString()}
+          Creada el {date}
         </Text>
         <Text style={styles.total}>
-          Total: ${total}
+          Total:{order.total}
         </Text>
       </View>
-      <TouchableOpacity style={styles.searchIcon} onPress={null}>
+      <TouchableOpacity style={styles.searchIcon} onPress={()=>{
+        setOrderId(order.orderId)
+        setModalVisible(true)
+        }}>
         <Feather name="search" size={24} color="black" />
       </TouchableOpacity>
 

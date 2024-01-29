@@ -27,6 +27,9 @@ const StyleHeader = StyleSheet.create({
   viewNull:{
     paddingLeft:'6%'
 
+  },
+  logout:{
+    marginLeft:170
   }
 
 

@@ -7,12 +7,16 @@ import Header from "../components/header/Header"
 const Stack = createNativeStackNavigator();
 
 const ShopNavigator = () => {
+    
     return (
         
             <Stack.Navigator
                 screenOptions={
+
                     ({navigation,route}) =>({
+                        
                         header:()=><Header title={route.name} navigation={navigation}/>
+                        
                     })
                 }
             >

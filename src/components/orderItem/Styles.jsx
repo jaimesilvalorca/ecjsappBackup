@@ -16,7 +16,8 @@ const StyleOrderItem = StyleSheet.create({
     },
     total:{
         fontFamily:'ComicNeue-Regular',
-        fontSize:14,
+        fontSize:20,
+        fontWeight:"bold"
     }
 
 })

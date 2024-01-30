@@ -11,11 +11,30 @@ const StyleHeader = StyleSheet.create({
     flexDirection:'row',
     paddingHorizontal:30,
     paddingTop:30,
-  
-    
-
-    
-
+  },
+  headerContainers:{
+    height: 100,
+    alignItems:'center',
+    backgroundColor:'red',
+    flexDirection:'row',
+    paddingHorizontal:30,
+    paddingTop:30,
+  },
+  headerContainerp:{
+    height: 100,
+    alignItems:'center',
+    backgroundColor:'blue',
+    flexDirection:'row',
+    paddingHorizontal:30,
+    paddingTop:30,
+  },
+  headerContainerx:{
+    height: 100,
+    alignItems:'center',
+    backgroundColor:'green',
+    flexDirection:'row',
+    paddingHorizontal:30,
+    paddingTop:30,
   },
   headerTitle:{
     paddingLeft:'35%',

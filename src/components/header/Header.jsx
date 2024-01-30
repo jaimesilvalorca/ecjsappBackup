@@ -9,11 +9,10 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 
 
-const Header = ({ title, navigation}) => {
+const Header = ({ title, navigation }) => {
 
   const email = useSelector(state => state.authReducer.user)
   const localId = useSelector(state => state.authReducer.localId)
-
 
   const dispatch = useDispatch()
 

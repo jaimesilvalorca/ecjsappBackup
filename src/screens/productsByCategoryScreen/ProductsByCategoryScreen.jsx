@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Search from '../../components/search/Search'
 import { useSelector, useDispatch } from 'react-redux'
 import { useGetProductsByCategoryQuery } from '../../services/shopService'
+import Header from '../../components/header/Header'
 
 const ProductsByCategoryScreen = ({ navigation, route }) => {
 
@@ -50,6 +51,7 @@ const ProductsByCategoryScreen = ({ navigation, route }) => {
           <ActivityIndicator />
           :
           <>
+            <Header title="Products" navigation={navigation} />
             <Search onSearchHandlerEvent={onSearch} />
             <FlatList
               data={productsByCategory}

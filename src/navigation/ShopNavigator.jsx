@@ -10,29 +10,30 @@ const ShopNavigator = () => {
     
     return (
         
-            <Stack.Navigator
-                screenOptions={
-
-                    ({navigation,route}) =>({
-                        
-                        header:()=><Header title={route.name} navigation={navigation}/>
-                        
-                    })
-                }
-            >
+            <Stack.Navigator>
                 <Stack.Screen
                     name="Categorias"
                     component={CategoriesScreen}
+                    options={{
+                        headerShown:false
+                    }}
 
                 />
                 <Stack.Screen
                     name="Productos"
                     component={ProductsByCategoryScreen}
+                    options={{
+                        headerShown:false
+                    }}
+                    
 
                 />
                 <Stack.Screen
                     name="Detalle"
                     component={ProductDetailScreen}
+                    options={{
+                        headerShown:false
+                    }}
 
                 />
             </Stack.Navigator>

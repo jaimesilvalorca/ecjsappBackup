@@ -4,6 +4,7 @@ import styles from './Styles'
 import CategoryItem from '../../components/categoryItem/CategoryItem'
 import {useSelector} from 'react-redux'
 import { useGetCategoriesQuery } from '../../services/shopService'
+import Header from '../../components/header/Header'
 
 
 const CategoriesScreen = ({navigation}) => {
@@ -18,6 +19,7 @@ const CategoriesScreen = ({navigation}) => {
 
   return (
     <>
+    <Header title="Categories" navigation={navigation} />
     <FlatList style={styles.categories}
       data={data}
       renderItem={renderCategoryItem}

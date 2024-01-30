@@ -9,11 +9,12 @@ import Carousel from '../../components/carousel/Carousel'
 import { addItem } from '../../features/cartSlice'
 
 
-const ProductDetailScreen = ({ route}) => {
+const ProductDetailScreen = ({ navigation,route}) => {
   // const [productSelected, setProductSelected] = useState({})
   const [isLoading, setIsLoading] = useState(true)
   const [isPortrait, setIsPortrait] = useState(true)
   const { height, width } = useWindowDimensions()
+  console.log(route)
 
   const productId = route.params
   const productSelected = useSelector(state=>state.shopReducer.productSelected)
@@ -36,6 +37,7 @@ const ProductDetailScreen = ({ route}) => {
 
   return (
     <>
+    <Header title="Detail" navigation={navigation} />
       {
         isLoading
           ?
